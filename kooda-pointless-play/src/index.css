@@ -1,0 +1,237 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* KOODA Design System - Bright, playful, and chaotically beautiful 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Chaotic Background */
+    --background: 250 100% 98%;
+    --foreground: 270 15% 15%;
+
+    /* Card Magic */
+    --card: 0 0% 100%;
+    --card-foreground: 270 15% 15%;
+
+    /* Popover Chaos */
+    --popover: 0 0% 100%;
+    --popover-foreground: 270 15% 15%;
+
+    /* Neon Primary - Electric Purple */
+    --primary: 270 95% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Neon Secondary - Hot Pink */
+    --secondary: 320 100% 70%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted Madness */
+    --muted: 250 20% 95%;
+    --muted-foreground: 270 15% 45%;
+
+    /* Accent Insanity - Cyan */
+    --accent: 180 100% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive Delight - Neon Orange */
+    --destructive: 30 100% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders & Inputs */
+    --border: 250 30% 90%;
+    --input: 250 30% 95%;
+    --ring: 270 95% 60%;
+
+    /* Gradients for Maximum Chaos */
+    --gradient-hero: linear-gradient(135deg, hsl(270 95% 60%), hsl(320 100% 70%), hsl(180 100% 60%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(250 30% 98%));
+    --gradient-button: linear-gradient(135deg, hsl(270 95% 60%), hsl(320 100% 70%));
+    --gradient-accent: linear-gradient(90deg, hsl(180 100% 60%), hsl(60 100% 70%));
+
+    /* Shadows with Neon Glow */
+    --shadow-neon: 0 0 20px hsl(270 95% 60% / 0.5);
+    --shadow-card: 0 10px 30px hsl(270 20% 20% / 0.1);
+    --shadow-hover: 0 15px 40px hsl(320 100% 70% / 0.3);
+
+    /* Animation Variables */
+    --transition-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Mode - Even More Chaotic */
+    --background: 270 20% 8%;
+    --foreground: 250 100% 95%;
+
+    --card: 270 15% 12%;
+    --card-foreground: 250 100% 95%;
+
+    --popover: 270 15% 12%;
+    --popover-foreground: 250 100% 95%;
+
+    --primary: 270 100% 75%;
+    --primary-foreground: 270 20% 8%;
+
+    --secondary: 320 100% 75%;
+    --secondary-foreground: 270 20% 8%;
+
+    --muted: 270 15% 15%;
+    --muted-foreground: 250 20% 70%;
+
+    --accent: 180 100% 70%;
+    --accent-foreground: 270 20% 8%;
+
+    --destructive: 30 100% 70%;
+    --destructive-foreground: 270 20% 8%;
+
+    --border: 270 15% 20%;
+    --input: 270 15% 15%;
+    --ring: 270 100% 75%;
+
+    /* Dark Mode Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(270 100% 75%), hsl(320 100% 75%), hsl(180 100% 70%));
+    --gradient-card: linear-gradient(145deg, hsl(270 15% 12%), hsl(270 15% 16%));
+    --gradient-button: linear-gradient(135deg, hsl(270 100% 75%), hsl(320 100% 75%));
+    --gradient-accent: linear-gradient(90deg, hsl(180 100% 70%), hsl(60 100% 80%));
+
+    /* Dark Mode Shadows */
+    --shadow-neon: 0 0 25px hsl(270 100% 75% / 0.6);
+    --shadow-card: 0 10px 30px hsl(0 0% 0% / 0.3);
+    --shadow-hover: 0 15px 40px hsl(320 100% 75% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Fredoka', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  /* Custom Animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+  }
+
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(1deg); }
+    75% { transform: rotate(-1deg); }
+  }
+
+  @keyframes bounce-scale {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% { box-shadow: var(--shadow-neon); }
+    50% { box-shadow: 0 0 30px hsl(270 95% 60% / 0.8); }
+  }
+
+  @keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+}
+
+@layer components {
+  /* Hero Text Styles */
+  .hero-title {
+    @apply text-6xl md:text-8xl font-black bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
+    background-size: 200% 200%;
+    animation: rainbow 3s ease infinite;
+  }
+
+  .hero-subtitle {
+    @apply text-xl md:text-2xl text-muted-foreground font-medium;
+  }
+
+  /* Animated Buttons */
+  .btn-chaos {
+    @apply relative px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300;
+    background: var(--gradient-button);
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-bounce);
+  }
+
+  .btn-chaos:hover {
+    animation: bounce-scale 0.6s ease-in-out, glow-pulse 2s ease-in-out infinite;
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+  }
+
+  /* Card Styles */
+  .chaos-card {
+    @apply relative p-6 rounded-3xl cursor-pointer transition-all duration-500;
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-card);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+
+  .chaos-card:hover {
+    transform: translateY(-8px) rotate(1deg);
+    box-shadow: var(--shadow-hover);
+    animation: wiggle 0.5s ease-in-out;
+  }
+
+  .chaos-card::before {
+    content: '';
+    @apply absolute inset-0 rounded-3xl opacity-0 transition-opacity duration-300;
+    background: var(--gradient-hero);
+    z-index: -1;
+  }
+
+  .chaos-card:hover::before {
+    opacity: 0.1;
+  }
+
+  /* Floating Animation */
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Stats Counter */
+  .stat-counter {
+    @apply text-4xl md:text-6xl font-black;
+    background: var(--gradient-accent);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  /* Testimonial Cards */
+  .testimonial-card {
+    @apply p-6 rounded-2xl;
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-card);
+    border-left: 4px solid hsl(var(--accent));
+  }
+}
