@@ -54,9 +54,9 @@ const ManifestoSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className="chaos-card text-center">
             <div className="mb-4">
-              <div className="text-6xl mb-2">🐶</div>
+              <div className="text-6xl mb-2">🦙</div>
               <div className="stat-counter">{formatNumber(dogesScrolled)}</div>
-              <p className="text-muted-foreground font-medium">Doges Scrolled</p>
+              <p className="text-muted-foreground font-medium">Llamas Scrolled</p>
             </div>
           </div>
 

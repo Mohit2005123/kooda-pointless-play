@@ -6,7 +6,7 @@ const CompartmentsSection = () => {
       id: 'long-doge',
       title: 'Long Llama Challenge',
       url: 'https://long-llama.vercel.app',
-      emoji: '🐶',
+      emoji: '🦙',
       description: 'Scroll to enlightenment. Infinite doge, infinite wisdom.',
       tagline: 'The spiritual journey your mouse never knew it needed',
       color: 'from-yellow-400 to-orange-500'
