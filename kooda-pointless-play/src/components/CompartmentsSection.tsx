@@ -5,7 +5,7 @@ const CompartmentsSection = () => {
     {
       id: 'long-doge',
       title: 'Long Llama Challenge',
-      url: 'https://longdogechallenge.com/',
+      url: 'https://long-llama.vercel.app',
       emoji: '🐶',
       description: 'Scroll to enlightenment. Infinite doge, infinite wisdom.',
       tagline: 'The spiritual journey your mouse never knew it needed',
@@ -14,7 +14,7 @@ const CompartmentsSection = () => {
     {
       id: 'checkbox-race',
       title: 'tick-tok',
-      url: 'https://checkboxrace.com/',
+      url: 'https://tick-tok.vercel.app',
       emoji: '✅',
       description: 'The Olympics of clicking. Check yourself before you wreck yourself.',
       tagline: 'Professional checkbox athlete training ground',
@@ -23,7 +23,7 @@ const CompartmentsSection = () => {
     {
       id: 'mondrian-me',
       title: 'Art Attack',
-      url: 'https://mondrianandme.com/',
+      url: 'https://art-attack-seven.vercel.app',
       emoji: '🎨',
       description: 'Unleash your inner Picasso… but with stricter geometry.',
       tagline: 'Where art meets overthinking',
@@ -32,7 +32,7 @@ const CompartmentsSection = () => {
     {
       id: 'smash-walls',
       title: 'Angry Walls',
-      url: 'https://smashthewalls.com/',
+      url: 'https://angry-walls.vercel.app',
       emoji: '🧱',
       description: 'Because demolition is therapy.',
       tagline: 'Anger management through digital destruction',
