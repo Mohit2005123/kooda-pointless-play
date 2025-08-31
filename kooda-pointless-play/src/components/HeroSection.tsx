@@ -44,8 +44,8 @@ const HeroSection = () => {
 
         {/* Subtitle */}
         <p className="hero-subtitle mb-12 max-w-2xl mx-auto">
-          Why solve real problems when you can scroll infinite doges? 
-          <br />
+          Why solve real problems when you can scroll infinite llamas? 
+          <br />d
           <span className="text-accent font-semibold">Welcome to the portal of absolutely pointless fun.</span>
         </p>
 

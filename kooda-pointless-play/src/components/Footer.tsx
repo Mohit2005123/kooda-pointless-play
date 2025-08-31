@@ -23,7 +23,7 @@ const Footer = () => {
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   KOODA is not responsible for lost productivity, strained eyes, broken mice, 
                   existential crises, or sudden urges to reorganize your life after realizing 
-                  you just spent 3 hours making a digital doge longer. Enter at your own risk. 
+                  you just spent 3 hours making a digital llama longer. Enter at your own risk. 
                   Side effects may include: uncontrollable giggling, questioning life choices, 
                   and becoming the office expert on checkbox racing techniques.
                 </p>

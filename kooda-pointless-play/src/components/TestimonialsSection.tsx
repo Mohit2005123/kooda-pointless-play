@@ -4,7 +4,7 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       id: 1,
-      text: "I wasted 6 hours scrolling a doge. 10/10 would do again. My productivity has never been lower and my happiness has never been higher.",
+      text: "I wasted 6 hours scrolling a llama. 10/10 would do again. My productivity has never been lower and my happiness has never been higher.",
       author: "Elon D.",
       role: "Professional Time Waster",
       avatar: "🚀",
