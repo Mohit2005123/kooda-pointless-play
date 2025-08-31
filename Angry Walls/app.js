@@ -1,3 +1,4 @@
+let clickAudio;
 function init() {
     container = document.createElement("div"),
     document.body.appendChild(container),
@@ -20,7 +21,10 @@ function init() {
     renderer.setSize(window.innerWidth, window.innerHeight),
     container.appendChild(renderer.domElement),
     image.addEventListener("click", imageClickHandler),
-    window.addEventListener("resize", onWindowResize, !1)
+    window.addEventListener("resize", onWindowResize, !1);
+    // Preload click sound
+    clickAudio = new Audio("AngryWalls.mp3");
+    clickAudio.load();
 }
 function addShape(t, e, i, s, n, r, a, o, h, c) {
     var l = new THREE.ExtrudeGeometry(t,e)
@@ -78,6 +82,12 @@ function makeBox() {
     scene.add(t)
 }
 function imageClickHandler(t) {
+    // Play click sound
+    if (clickAudio) {
+        // Restart sound if already playing
+        clickAudio.currentTime = 0;
+        clickAudio.play();
+    }
     var e = image.getBoundingClientRect();
     e.top,
     e.left;

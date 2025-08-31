@@ -1,4 +1,5 @@
 ;(() => {
+
   const canvas = document.querySelector("#canvas")
   const context = canvas.getContext("2d")
 
@@ -8,6 +9,18 @@
   context.lineWidth = 10
   const rectangles = []
   let splitDirectionVertical = true
+
+  // Preload click sound
+  const clickAudio = new Audio("./ArtAttack.mp3");
+  clickAudio.load();
+
+  // Play sound on any page click
+  document.addEventListener("click", function() {
+    try {
+      clickAudio.currentTime = 0;
+      clickAudio.play();
+    } catch (e) {}
+  });
 
   canvas.addEventListener("click", onRectangleClick)
 
