@@ -1,4 +1,9 @@
 (() => {
+  // Function to play tick sound
+  function playTickSound() {
+    const audio = new Audio('tickbox.mp3');
+    audio.play();
+  }
   const allCheckboxes = document.querySelectorAll("input");
   const checkboxWrapper = document.querySelector(".checkboxes");
   const scoreBoard = document.querySelector(".score");
@@ -109,6 +114,9 @@
 
   allCheckboxes.forEach((checkbox, index) => {
     checkbox.addEventListener("click", (event) => {
+  // Play tick sound (new instance every time)
+  playTickSound();
+
       if (!startTime) {
         startTimer();
       }

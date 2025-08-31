@@ -71,7 +71,13 @@ function injectNeck(entry) {
 function injectWow() {
   wows++
   wowEl.innerText = wows
-
+   const audio = document.getElementById("kooda-audio");
+   console.dir(audio);
+   console.log(audio);
+  if (audio) {
+    audio.currentTime = 0;
+    audio.play();
+  }
   const newWow = document.createElement("div")
   newWow.className = "textwow"
   newWow.innerText = "kooda"

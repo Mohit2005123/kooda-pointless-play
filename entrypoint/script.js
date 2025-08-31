@@ -1,4 +1,8 @@
 (() => {
+  function playTickSound() {
+    const audio = new Audio('tickbox.mp3');
+    audio.play();
+  }
   const allCheckboxes = document.querySelectorAll("input");
   const checkboxWrapper = document.querySelector(".checkboxes");
   const scoreBoard = document.querySelector(".score");
@@ -62,6 +66,7 @@
 
   function reset() {
     allCheckboxes.forEach((checkbox, index) => {
+      
       checkbox.style.transform = "none";
       if (index !== 0) {
         checkbox.disabled = true;
@@ -109,6 +114,7 @@
 
   allCheckboxes.forEach((checkbox, index) => {
     checkbox.addEventListener("click", (event) => {
+      playTickSound();
       if (!startTime) {
         startTimer();
       }
